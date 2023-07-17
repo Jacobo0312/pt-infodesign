@@ -26,5 +26,20 @@ Esta es una API que proporciona tres rutas para consultar información sobre tra
 
 3. `/tramos-cliente`: Muestra los 20 peores tramos/cliente en un rango de fechas especificado.
 
+## Instrucciones para ejecutar con Docker Compose
+
+Para ejecutar el proyecto utilizando Docker Compose, sigue los siguientes pasos:
+
+1. Asegúrate de tener Docker y Docker Compose instalados en tu sistema.
+
+2. Clona este repositorio en tu máquina local.
+
+3. Abre una terminal y navega hasta la carpeta raíz del proyecto.
+
+4. Ejecuta el siguiente comando para iniciar los contenedores de Docker:
+
+```bash
+docker-compose up
+
 
 

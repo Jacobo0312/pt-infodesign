@@ -5,7 +5,8 @@ import {Perdidas} from '../models/perdidas.interface';
 import {Request} from '../models/request.interface';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4000/',
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 15000,
   headers: {
     'Content-Type': 'application/json',

@@ -2,10 +2,10 @@ var mysql = require('mysql2');
 
 //Configuración
 var mysqlConn = mysql.createConnection({
-    host: 'mysql-db',
-    database: 'pruebainfodesign',
-    user: 'pt-root',
-    password: 'juan2002'
+    host: process.env.MYSQL_HOST,
+    database: process.env.MYSQL_DATABASE,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD
 });
 
 //Conexión
