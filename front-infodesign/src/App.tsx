@@ -12,7 +12,6 @@ import {Tramos, tramosColumns} from './models/tramos.interface';
 import ChartBarTramos from './components/ChartBarTramos';
 import ChartLineTramos from './components/ChartLineTramos';
 import ChartBarCliente from './components/ChartBarCliente';
-import TramoCharts from './components/ChartTortaTramos';
 import ChartTortaTramos from './components/ChartTortaTramos';
 
 const App = () => {
@@ -37,7 +36,11 @@ const App = () => {
   useEffect(() => {
     Api.getPeoresTramosCliente(dateRange)
       .then(data => {
-        setDataPerdidas(data);
+        const putIds = data.map((item, index) => {
+          item.id = index + 1;
+          return item;
+        });
+        setDataPerdidas(putIds);
       })
       .catch(err => {
         console.log(err);

@@ -1,0 +1,12 @@
+.chartTorta-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chartTorta-container .chart-container {
+    width: 30%;
+    padding: 2rem;
+    height: 400px;
+}

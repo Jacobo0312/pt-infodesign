@@ -10,25 +10,25 @@ export const tramosColumns: Column[] = [
   {
     key: 'Linea',
     label: 'LINEA',
-    fixed: true,
-    width: 100,
+    fixed: false,
+    width: 90,
   },
   {
     key: 'consumo',
     label: 'CONSUMO',
-    fixed: true,
-    width: 100,
+    fixed: false,
+    width: 90,
   },
   {
     key: 'perdidas',
     label: 'PERDIDAS',
-    fixed: true,
-    width: 100,
+    fixed: false,
+    width: 170,
   },
   {
     key: 'costo',
     label: 'COSTO',
-    fixed: true,
-    width: 100,
+    fixed: false,
+    width: 150,
   },
 ];

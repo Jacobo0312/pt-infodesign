@@ -52,7 +52,7 @@ const TableID = ({data, defaultColumns, title}: TableIDProps) => {
       <h2 className="title">{title}</h2>
       <div>
         <span className="toggle">
-          Compact：
+          Compacto：
           <Toggle
             checkedChildren="On"
             unCheckedChildren="Off"
@@ -62,7 +62,7 @@ const TableID = ({data, defaultColumns, title}: TableIDProps) => {
         </span>
 
         <span className="toggle">
-          Bordered：
+          Borde:
           <Toggle
             checkedChildren="On"
             unCheckedChildren="Off"
@@ -72,7 +72,7 @@ const TableID = ({data, defaultColumns, title}: TableIDProps) => {
         </span>
 
         <span className="toggle">
-          Show Header：
+          Cabezeras：
           <Toggle
             checkedChildren="On"
             unCheckedChildren="Off"
@@ -144,6 +144,7 @@ const TableID = ({data, defaultColumns, title}: TableIDProps) => {
       <hr />
       <div style={{height: autoHeight ? 'auto' : 400}}>
         <Table
+          className="table"
           loading={loading}
           height={300}
           hover={hover}

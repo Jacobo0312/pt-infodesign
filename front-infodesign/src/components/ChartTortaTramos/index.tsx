@@ -2,6 +2,7 @@ import {Chart as ChartJS, registerables} from 'chart.js';
 import {Doughnut} from 'react-chartjs-2';
 ChartJS.register(...registerables);
 import {Cliente} from '../../models/cliente.interface';
+import './index.css';
 
 interface Props {
   jsonData: Cliente[] | undefined;
@@ -36,10 +37,10 @@ const ChartTortaTramos = ({jsonData}: Props) => {
   };
 
   return (
-    <div>
+    <div className="chartTorta-container">
       {dataPorTramo.map((data, index) => (
         <div key={index} className="chart-container">
-          <h3>Consumo, Pérdidas y Costo en {data.label}</h3>
+          <h3>{data.label}</h3>
           <Doughnut
             data={{
               labels: tiposConsumo,
