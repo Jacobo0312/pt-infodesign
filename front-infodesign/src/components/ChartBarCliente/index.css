@@ -1,0 +1,11 @@
+.chartCliente-container {
+    width: 30%;
+    padding: 1rem;
+    height: 400px;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

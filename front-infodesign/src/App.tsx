@@ -9,6 +9,11 @@ import TableID from './components/TableID';
 import {Perdidas, perdidasColumns} from './models/perdidas.interface';
 import {Cliente, clienteColumns} from './models/cliente.interface';
 import {Tramos, tramosColumns} from './models/tramos.interface';
+import ChartBarTramos from './components/ChartBarTramos';
+import ChartLineTramos from './components/ChartLineTramos';
+import ChartBarCliente from './components/ChartBarCliente';
+import TramoCharts from './components/ChartTortaTramos';
+import ChartTortaTramos from './components/ChartTortaTramos';
 
 const App = () => {
   const [dateRange, setDateRange] = useState<Request>({
@@ -52,7 +57,6 @@ const App = () => {
         console.log(err);
       });
   }, [dateRange]);
-
   return (
     <>
       <h1>PRUEBA TECNICA INFO-DESIGN</h1>
@@ -72,12 +76,17 @@ const App = () => {
           title="Tabla de Tramos"
         />
       </div>
-
+      <div className="main-container">
+        <ChartBarTramos jsonData={dataTramos} />
+        <ChartLineTramos jsonData={dataTramos} />
+      </div>
       <TableID
         data={dataClientes}
         defaultColumns={clienteColumns}
         title="Tabla de clientes"
       />
+      <ChartBarCliente jsonData={dataClientes} />
+      <ChartTortaTramos jsonData={dataClientes} />
     </>
   );
 };

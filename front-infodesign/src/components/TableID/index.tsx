@@ -1,117 +1,15 @@
 import {Table, Toggle, TagPicker} from 'rsuite';
-import {Perdidas} from '../models/perdidas.interface';
-import {Cliente} from '../models/cliente.interface';
-import {Tramos} from '../models/tramos.interface';
-import React, {useEffect, useState} from 'react';
-import {Column} from '../models/columns.interface';
+import {Perdidas} from '../../models/perdidas.interface';
+import {Cliente} from '../../models/cliente.interface';
+import {Tramos} from '../../models/tramos.interface';
+import React, {useState} from 'react';
+import {Column} from '../../models/columns.interface';
 import {JSX} from 'react/jsx-runtime';
 import {InnerCellProps} from 'rsuite-table/lib/Cell';
 import {HeaderCellProps} from 'rsuite/esm/Table';
 import './index.css';
 
 const {Column, HeaderCell, Cell} = Table;
-const data: Perdidas[] = [
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 4',
-    Perdidas: 0.299920999,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 2',
-    Perdidas: 0.299910796,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 5',
-    Perdidas: 0.299766946,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 4',
-    Perdidas: 0.299681654,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 3',
-    Perdidas: 0.299391517,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 1',
-    Perdidas: 0.299051284,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 1',
-    Perdidas: 0.298945031,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 3',
-    Perdidas: 0.298801886,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 2',
-    Perdidas: 0.298702342,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 5',
-    Perdidas: 0.298578781,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 1',
-    Perdidas: 0.298421806,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 5',
-    Perdidas: 0.298349828,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 2',
-    Perdidas: 0.298282754,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 2',
-    Perdidas: 0.298052711,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 5',
-    Perdidas: 0.297920932,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 3',
-    Perdidas: 0.297919214,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 4',
-    Perdidas: 0.297844155,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 3',
-    Perdidas: 0.29764617,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 4',
-    Perdidas: 0.297280089,
-  },
-  {
-    TipoConsumo: 'Comercial',
-    Linea: 'Tramo 3',
-    Perdidas: 0.297003277,
-  },
-];
 
 const CompactCell = (
   props: JSX.IntrinsicAttributes &
